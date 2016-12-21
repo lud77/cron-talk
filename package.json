@@ -1,17 +1,17 @@
 {
   "name": "crontalk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A pure JS parser for natural language repeated events expressions",
   "main": "dist/crontalk.js",
   "badges": [
     {
-      "url": "tests",
+      "url": "coverage/lcov-report/index.html",
       "desc": "tests",
       "value": "passing",
       "color": "green"
     },
     {
-      "url": "coverage",
+      "url": "coverage/lcov-report/index.html",
       "desc": "coverage",
       "value": "68.32%",
       "color": "green"
