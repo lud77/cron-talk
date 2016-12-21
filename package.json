@@ -13,7 +13,7 @@
     {
       "url": "coverage/lcov-report/index.html",
       "desc": "coverage",
-      "value": "68.32%",
+      "value": "68.32",
       "color": "green"
     }
   ],
@@ -32,7 +32,7 @@
     "type": "git",
     "url": "https://github.com/lud77/crontalk.git"
   },
-  "documentation": "docs/index.html",
+  "railroad": "docs/railroad.html",
   "license": "MIT",
   "devDependencies": {
     "chai": "3.5.0",
