@@ -2,7 +2,7 @@
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
-![coverage/lcov-report/index.html](https://img.shields.io/badge/coverage-68.32%-green.svg)
+![coverage/lcov-report/index.html](https://img.shields.io/badge/coverage-68.32-green.svg)
 
 
 ## Installation
