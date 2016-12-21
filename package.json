@@ -1,0 +1,47 @@
+{
+  "name": "crontalk",
+  "version": "0.0.0",
+  "description": "A pure JS parser for natural language repeated events expressions",
+  "main": "dist/crontalk.js",
+  "badges": [
+    {
+      "url": "tests",
+      "desc": "tests",
+      "value": "passing",
+      "color": "green"
+    },
+    {
+      "url": "coverage",
+      "desc": "coverage",
+      "value": "68.32%",
+      "color": "green"
+    }
+  ],
+  "scripts": {
+    "clean:docs": "shx rm -r docs/**/* && true",
+    "clean:src": "shx rm -r docs/**/* && true",
+    "build:railroad": "node pkg/railroad/railroad.js",
+    "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json -p contribute:pkg/readme/CONTRIBUTE.md.hbs -p installation:pkg/readme/INSTALL.md.hbs > README.md",
+    "build:grammar": "pegjs -o dist/crontalk.js src/peg/crontalk.peg",
+    "update:version": "npm version patch --force && npm run build:readme",
+    "test": "mocha test/**/*.js",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**/*.js"
+  },
+  "author": "Stefano Butera <stefano.butera@nethnic.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lud77/crontalk.git"
+  },
+  "documentation": "docs/index.html",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "grammkit": "0.4.0",
+    "hbsrender": "1.0.8",
+    "istanbul": "0.4.5",
+    "mocha": "3.0.2",
+    "pegjs": "0.10.0",
+    "shx": "0.1.4"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,250 @@
+{
+	function lapse_clause(from, to) {
+		var result = {};
+		if (from != null) {
+			result.from = from;
+		}
+
+		if (to != null) {
+			result.to = to;
+		}
+
+		return result; 
+	}
+
+	function time_clause(number, unit, of) {
+	    if (of != null) {
+	    	of[unit] = number;
+	    	return of;
+	    }
+
+	    var result = {};
+	    result[unit] = number;
+	    return result; 
+	}
+}
+
+Expression = _? every:(Every_Span_Clause / Every_Occurrence_Clause) lapse:(_ lapse:Lapse_Clause { return lapse; })? _? { 
+	var result = every;
+	if (lapse != null) {
+		if (result.span != undefined) {
+			result.span.lapse = lapse;
+		}
+	}
+	return result;
+}
+
+Every_Span_Clause = 
+	Every_Single_Unit_Clause /
+	'every' _ span:Span_Clause { return span; }
+
+Every_Single_Unit_Clause = 'every' _ unit:Unit { 
+	var result = { span: {} };
+	result.span[unit + 's'] = 1;
+	return result;
+}
+
+Span_Clause = period:Number _ unit:Unit 's' additional:(_ ('and' / ',') _ additional:Span_Clause { return additional; })? { 
+	var result = { span: {} };
+	result.span[unit + 's'] = period;
+
+	if (additional != null) {
+		for (var s in additional.span) {
+			result.span[s] = additional.span[s];
+		}
+	}
+
+	return result; 
+}
+
+Every_Occurrence_Clause = 
+	'every' _ ordinal:(ordinal:Ordinal_Clause _ { return ordinal; })? on:(Month_Literal / Weekday_Literal) { 
+		var result = { span: { on: {} } };
+		if (ordinal != null) {
+			if (on.day !== undefined) {
+				result.span.weeks = ordinal + 1;
+				result.span.on.week = ordinal;
+				result.span.on._day = on.day;
+			}
+
+			if (on.month !== undefined) {
+				result.span.years = ordinal + 1;
+				result.span.on.year = ordinal;
+				result.span.on._month = on.month;
+			}
+		} else {
+			if (on.day !== undefined) {
+				result.span.weeks = 1;
+				result.span.on.week = 0;
+				result.span.on._day = on.day;
+			}
+
+			if (on.month !== undefined) {
+				result.span.years = 1;
+				result.span.on.year = 0;
+				result.span.on._month = on.month;
+			}
+		}
+
+		return result; 
+	}
+
+Occurrence_Clause = 
+	weekday:Weekday_Literal { return {  }; } / 
+	month:Month_Literal
+
+Lapse_Clause = 
+	from:From_Clause to:(_ to:To_Clause { return to; })? { return lapse_clause(from, to); } /
+    until:Until_Clause { return lapse_clause(null, until); }
+
+From_Clause = 'from' _ from_time:Time_Clause { return from_time; }
+
+To_Clause = 'to' _ to_time:Time_Clause { return to_time; }
+
+Until_Clause = 'until' _ to_time:Time_Clause { return to_time; }
+	
+Time_Clause = 
+	Date_Clause /
+	Deictic_Clause /
+	'the' _ ordinal:Ordinal_Clause _ unit:Unit of:(_ of:Of_Clause { return of; })? { 
+		return time_clause(ordinal, unit, of);
+	} /
+	unit:Unit _ number:Number of:(_ of:Of_Clause { return of; })? { 
+		return time_clause(number, unit, of);
+	} /
+	'the' _ 'end' of:(_ of:Of_Clause { return of; })? { 
+		return time_clause(-1, 'minute', of);
+	} /
+	'the' _ 'beginning' of:(_ of:Of_Clause { return of; })? { 
+		return time_clause(0, 'minute', of);
+	}	
+
+Date_Clause = 
+	month_day:
+		(
+		month_day:
+			(
+			ordinal:
+				(
+				'the' _ ordinal:Ordinal_Clause _ 'of' _ { return ordinal; }
+				)? 
+			month:
+				(
+				month:Month_Literal _ { return month; }
+				)
+			) { 
+				var result = {};
+                if (month_day.length === 2) {
+                	result.month = month_day[1].month;
+					result.day = month_day[0];
+				} else {
+                	result.month = month[0].month;
+                }
+
+				return result;
+			}
+		)? 
+	year:(number:Number / (modifier:('last' / 'this' / 'next') _ 'year' { return modifier; })) { 
+		var result = { year: year };
+        if (month_day != null) {
+			if (month_day.month != null) {
+				result.month = month_day.month;
+			}
+
+			if (month_day.day != null) {
+				result.day = month_day.day;
+			}
+        }
+
+		return result;
+	}
+
+Deictic_Clause = 
+	modifier:('last' / 'this' / 'next') _ unit:Unit {
+		return time_clause(modifier, unit, null);
+	} / 
+	'now' {
+		return time_clause('this', 'minute', null);
+	} / 
+	'today' {
+		return time_clause('this', 'day', null);
+	} / 
+	'yesterday' {
+		return time_clause('last', 'day', null);
+	} /
+	'tomorrow' {
+		return time_clause('next', 'day', null);
+	}
+
+Of_Clause = 'of' _ context:Time_Clause { return context; }
+
+Ordinal_Clause = ordinal:(Ordinal_Number / Ordinal_Literal) last:(('-' / _) 'last')? { 
+	return (last == null) ? ordinal : -(ordinal + 1); 
+} / 'last' { return -1; }
+
+Ordinal_Number = number:Number Ordinal_Suffix { return parseInt(number) - 1; }
+
+Ordinal_Suffix = 'st' / 'nd' / 'rd' / 'th'
+
+Unit = 
+    'minute' / 
+    'hour' / 
+    'day' / 
+    'week' / 
+    'month' / 
+    'year'
+
+Ordinal_Literal = 
+    'first' { return 0; } / 
+    'second' { return 1; } / 
+    'third' { return 2; } / 
+    'fourth' { return 3; } / 
+    'fifth' { return 4; } / 
+    'sixth' { return 5; } /
+    'seventh' { return 6; }
+ 
+Month_Literal = 
+    'january'   { return { month: 0    }; } / 
+    'february'  { return { month: 1    }; } / 
+    'march'     { return { month: 2    }; } / 
+    'april'     { return { month: 3    }; } / 
+    'may'       { return { month: 4    }; } / 
+    'june'      { return { month: 5    }; } / 
+    'july'      { return { month: 6    }; } / 
+    'august'    { return { month: 7    }; } / 
+    'september' { return { month: 8    }; } / 
+    'october'   { return { month: 9    }; } / 
+    'november'  { return { month: 10   }; } / 
+    'december'  { return { month: 11   }; } /
+    'jan'       { return { month: 0    }; } / 
+    'feb'       { return { month: 1    }; } / 
+    'mar'       { return { month: 2    }; } / 
+    'apr'       { return { month: 3    }; } / 
+    'may'       { return { month: 4    }; } / 
+    'jun'       { return { month: 5    }; } / 
+    'jul'       { return { month: 6    }; } / 
+    'aug'       { return { month: 7    }; } / 
+    'sep'       { return { month: 8    }; } / 
+    'oct'       { return { month: 9    }; } / 
+    'nov'       { return { month: 10   }; } / 
+    'dec'       { return { month: 11   }; }
+
+Weekday_Literal = 
+    'monday'    { return { day: 0 }; } / 
+    'tuesday'   { return { day: 1 }; } / 
+    'wednesday' { return { day: 2 }; } / 
+    'thursday'  { return { day: 3 }; } / 
+    'friday'    { return { day: 4 }; } / 
+    'saturday'  { return { day: 5 }; } / 
+    'sunday'    { return { day: 6 }; } /
+    'mon'       { return { day: 0 }; } / 
+    'tue'       { return { day: 1 }; } / 
+    'wed'       { return { day: 2 }; } / 
+    'thu'       { return { day: 3 }; } / 
+    'fri'       { return { day: 4 }; } / 
+    'sat'       { return { day: 5 }; } / 
+    'sun'       { return { day: 6 }; }
+
+Number "integer" = [0-9]+ { return parseInt(text()); }
+
+_ "whitespace" = [ \t\n\r]* { return ' '; }

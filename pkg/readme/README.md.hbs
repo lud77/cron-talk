@@ -1,0 +1,70 @@
+# {{name}} v{{version}}
+> {{description}}
+
+{{#each badges}}
+![{{desc}}: {{value}}](https://img.shields.io/badge/{{desc}}-{{value}}-{{#if color}}{{color}}{{else}}green{{/if}}.svg)
+{{/each}}
+
+
+{{#> installation}}
+## Installation
+
+	npm install --save {{name}}
+{{/installation}}
+
+
+
+{{#> introduction}}
+## Why?
+
+Tired of messing with asterisks when scheduling jobs? Crontalk allows you to easily parse natural language expressions such as "every 3 days from next monday" and convert them to a JSON structure.
+
+
+## Features
+
+
+
+
+## Usage
+
+
+
+
+## Configuration
+
+
+
+
+{{/introduction}}
+
+
+
+{{#> documentation}}
+## Documentation
+
+Look at the [documentation]({{documentation}})
+{{/documentation}}
+
+
+
+{{#> contribute}}
+## Contributing
+
+Take a look at (CONTRIBUTE.md)
+{{/contribute}}
+
+
+
+{{#> history}}
+## Project History
+
+Take a look at (HISTORY.md)
+{{/history}}
+
+
+
+{{#> license}}
+## Licensing
+
+This package is released under the [{{license}} License](https://opensource.org/licenses/{{license}})
+{{/license}}
