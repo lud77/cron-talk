@@ -21,7 +21,7 @@
     "clean:docs": "shx rm -r docs/**/* && true",
     "clean:src": "shx rm -r docs/**/* && true",
     "build:railroad": "node pkg/railroad/railroad.js",
-    "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json -p contribute:pkg/readme/CONTRIBUTE.md.hbs -p installation:pkg/readme/INSTALL.md.hbs > README.md",
+    "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json > README.md",
     "build:grammar": "pegjs -o dist/crontalk.js src/peg/crontalk.peg",
     "update:version": "npm version patch --force && npm run build:readme",
     "test": "mocha test/**/*.js",
