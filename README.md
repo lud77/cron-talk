@@ -1,4 +1,4 @@
-# crontalk v0.0.1
+# crontalk v0.0.2
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
@@ -17,39 +17,16 @@ Clone the repository
 Tired of messing with asterisks when scheduling jobs? Crontalk allows you to easily parse natural language expressions such as "every 3 days from next monday" and convert them to a JSON structure.
 
 
-## Features
-
-
-
-
 ## Usage
 
-
-
-
-## Configuration
-
-
-
+TODO
 
 
 
 
 ## Documentation
 
-Look at the [documentation](docs/index.html)
-
-
-
-## Contributing
-
-K&R style indentation. Indent with 4 spaces. Use semicolons.
-
-
-
-## Project History
-
-Take a look at (HISTORY.md)
+Take a look at the [railroad diagram](docs/railroad.html) of Crontalk's DSL.
 
 
 
