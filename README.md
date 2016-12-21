@@ -1,4 +1,4 @@
-# crontalk v0.0.2
+# crontalk v0.0.3
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
@@ -7,9 +7,8 @@
 
 ## Installation
 
-Clone the repository
+	npm install --save crontalk
 
-	git clone --depth=1 https://github.com/lud77/crontalk.git projectFolder
 
 
 ## Why?
