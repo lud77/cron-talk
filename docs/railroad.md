@@ -1,7 +1,7 @@
 *Crontalk grammar railroad diagrams*
 **Expression**
 
-<img src="https://cdn.rawgit.com/lud77/cron-talk/master/docs/svg/Date_Clause.svg" />
+<img src="svg/Date_Clause.svg" />
 
 **Every_Span_Clause**
 ![Every_Span_Clause](svg/Every_Span_Clause.svg)
