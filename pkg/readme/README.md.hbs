@@ -22,7 +22,11 @@ Tired of messing with asterisks when scheduling jobs? Crontalk allows you to eas
 
 ## Usage
 
-TODO
+	const ct = require('crontalk');
+
+	let occurrences = ct.parse('every 3 days from the last day of september this year');
+
+	console.log(occurrences);
 
 {{/introduction}}
 
@@ -31,7 +35,8 @@ TODO
 {{#> documentation}}
 ## Documentation
 
-Take a look at the [railroad diagram]({{railroad}}) of Crontalk's DSL.
+Install the package and look at /docs/railroad.html for the railroad diagrams of Crontalk's DSL.
+Look at the tests for usage examples.
 {{/documentation}}
 
 
