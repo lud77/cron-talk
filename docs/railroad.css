@@ -1,0 +1,46 @@
+svg.railroad-diagram {
+    background-color: hsl(30, 20%, 95%);
+}
+svg.railroad-diagram path {
+    fill: rgba(0, 0, 0, 0);
+    stroke: black;
+    stroke-width: 3;
+}
+svg.railroad-diagram text {
+    cursor: pointer;
+    font: bold 14px monospace;
+    text-anchor: middle;
+}
+svg.railroad-diagram text.label {
+    text-anchor: start;
+}
+svg.railroad-diagram text.comment {
+    font: italic 12px monospace;
+}
+svg.railroad-diagram rect {
+    fill: hsl(120, 100%, 90%);
+    stroke: black;
+    stroke-width: 3;
+}
+body {
+    background-color: hsl(30, 20%, 95%);
+}
+input.form-control[type="text"], textarea.form-control {
+    background-color: hsl(30, 20%, 98%);
+}
+.load-examples {
+    margin-bottom: 25px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.load-examples a {
+    margin-left: 10px;
+}
+textarea.form-control.grammar-edit {
+    font-family: monospace;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.alert {
+    overflow-wrap: break-word;
+}

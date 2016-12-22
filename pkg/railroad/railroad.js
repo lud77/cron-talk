@@ -5,7 +5,7 @@ const parse = require('pegjs/lib/parser').parse;
 const fs = require('fs');
 const hbs = require('handlebars');
 
-const template = hbs.compile(fs.readFileSync('pkg/railroad/railroad.md.hbs').toString('utf8'));
+const template = hbs.compile(fs.readFileSync('pkg/railroad/railroad.html.hbs').toString('utf8'));
 const grammar = parse(fs.readFileSync('src/peg/crontalk.peg').toString('utf8'));
 
 let rules = [];
@@ -54,5 +54,5 @@ let tplRules = [];
 
 iterate(ruleKeys, grammar.rules, tplRules, function(rules) {
 	let out = template({ rules: rules });
-	fs.writeFileSync('docs/railroad.md', out);
+	fs.writeFileSync('docs/railroad.html', out);
 });
