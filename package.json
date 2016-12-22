@@ -1,6 +1,6 @@
 {
   "name": "crontalk",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A pure JS parser for natural language repeated events expressions",
   "main": "dist/crontalk.js",
   "badges": [
@@ -19,7 +19,7 @@
   ],
   "scripts": {
     "clean:docs": "shx rm -rf docs/**/* && shx mkdir -p docs/svg && true",
-    "build:railroad": "node pkg/railroad/railroad.js",
+    "build:railroad": "node pkg/railroad/railroad.js && shx cp pkg/railroad/style.css docs/railroad.css",
     "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json > README.md",
     "build:docs": "npm run clean:docs && npm run build:railroad && npm run build:readme",
     "build:grammar": "pegjs -o dist/crontalk.js src/peg/crontalk.peg",
