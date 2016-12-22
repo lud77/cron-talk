@@ -1,6 +1,6 @@
 {
   "name": "crontalk",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A pure JS parser for natural language repeated events expressions",
   "main": "dist/crontalk.js",
   "badges": [
