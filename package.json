@@ -1,6 +1,6 @@
 {
   "name": "crontalk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A pure JS parser for natural language repeated events expressions",
   "main": "dist/crontalk.js",
   "badges": [
@@ -18,21 +18,22 @@
     }
   ],
   "scripts": {
-    "clean:docs": "shx rm -r docs/**/* && true",
+    "clean:docs": "shx rm -r docs/**/* && shx mkdir docs/svg && true",
     "clean:src": "shx rm -r docs/**/* && true",
     "build:railroad": "node pkg/railroad/railroad.js",
     "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json > README.md",
+    "build:docs": "npm run clean:docs && npm run build:railroad && npm run build:readme",
     "build:grammar": "pegjs -o dist/crontalk.js src/peg/crontalk.peg",
-    "update:version": "npm version patch --force && npm run build:readme",
+    "update:version": "npm version patch --force && npm run build:docs",
     "test": "mocha test/**/*.js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**/*.js"
   },
   "author": "Stefano Butera <stefano.butera@nethnic.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lud77/crontalk.git"
+    "url": "https://github.com/lud77/cron-talk.git"
   },
-  "railroad": "docs/railroad.html",
+  "railroad": "docs/railroad.md",
   "license": "MIT",
   "devDependencies": {
     "chai": "3.5.0",

@@ -1,0 +1,89 @@
+<svg class="railroad-diagram" width="585" height="162" viewBox="0 0 585 162">
+<g transform="translate(.5 .5)">
+<path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M544 41h0"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M292 41h0"></path>
+<path d="M40 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M60 21h212"></path>
+</g>
+<path d="M272 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M40 41h20"></path>
+<g>
+<path d="M60 41h0"></path>
+<path d="M272 41h0"></path>
+<rect x="60" y="30" width="212" height="22" rx="10" ry="10"></rect>
+<text x="166" y="45">Unknown expression:group</text>
+</g>
+<path d="M272 41h20"></path>
+</g>
+<g>
+<path d="M292 41h0"></path>
+<path d="M544 41h0"></path>
+<path d="M292 41h20"></path>
+<g>
+<path d="M312 41h72"></path>
+<path d="M452 41h72"></path>
+<rect x="384" y="30" width="68" height="22"></rect>
+<text x="418" y="45">Number</text>
+</g>
+<path d="M524 41h20"></path>
+<path d="M292 41a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M312 71h0"></path>
+<path d="M524 71h0"></path>
+<g>
+<path d="M312 71h0"></path>
+<path d="M404 71h0"></path>
+<path d="M312 71h20"></path>
+<g>
+<path d="M332 71h0"></path>
+<path d="M384 71h0"></path>
+<rect x="332" y="60" width="52" height="22" rx="10" ry="10"></rect>
+<text x="358" y="75">last</text>
+</g>
+<path d="M384 71h20"></path>
+<path d="M312 71a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M332 101h0"></path>
+<path d="M384 101h0"></path>
+<rect x="332" y="90" width="52" height="22" rx="10" ry="10"></rect>
+<text x="358" y="105">this</text>
+</g>
+<path d="M384 101a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+<path d="M312 71a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M332 131h0"></path>
+<path d="M384 131h0"></path>
+<rect x="332" y="120" width="52" height="22" rx="10" ry="10"></rect>
+<text x="358" y="135">next</text>
+</g>
+<path d="M384 131a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M404 71h10"></path>
+<g>
+<path d="M414 71h0"></path>
+<path d="M442 71h0"></path>
+<rect x="414" y="60" width="28" height="22"></rect>
+<text x="428" y="75">&#95;</text>
+</g>
+<path d="M442 71h10"></path>
+<path d="M452 71h10"></path>
+<g>
+<path d="M462 71h0"></path>
+<path d="M514 71h0"></path>
+<rect x="462" y="60" width="52" height="22" rx="10" ry="10"></rect>
+<text x="488" y="75">year</text>
+</g>
+<path d="M514 71h10"></path>
+</g>
+<path d="M524 71a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+</g>
+<path d="M 544 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>

@@ -1,0 +1,77 @@
+<svg class="railroad-diagram" width="629" height="102" viewBox="0 0 629 102">
+<g transform="translate(.5 .5)">
+<path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M588 41h0"></path>
+<path d="M40 41h10"></path>
+<g>
+<path d="M50 41h0"></path>
+<path d="M110 41h0"></path>
+<rect x="50" y="30" width="60" height="22" rx="10" ry="10"></rect>
+<text x="80" y="45">every</text>
+</g>
+<path d="M110 41h10"></path>
+<path d="M120 41h10"></path>
+<g>
+<path d="M130 41h0"></path>
+<path d="M158 41h0"></path>
+<rect x="130" y="30" width="28" height="22"></rect>
+<text x="144" y="45">&#95;</text>
+</g>
+<path d="M158 41h10"></path>
+<g>
+<path d="M168 41h0"></path>
+<path d="M408 41h0"></path>
+<path d="M168 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M188 21h200"></path>
+</g>
+<path d="M388 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M168 41h20"></path>
+<g>
+<path d="M188 41h0"></path>
+<path d="M388 41h0"></path>
+<path d="M188 41h10"></path>
+<g>
+<path d="M198 41h0"></path>
+<path d="M330 41h0"></path>
+<rect x="198" y="30" width="132" height="22"></rect>
+<text x="264" y="45">Ordinal&#95;Clause</text>
+</g>
+<path d="M330 41h10"></path>
+<path d="M340 41h10"></path>
+<g>
+<path d="M350 41h0"></path>
+<path d="M378 41h0"></path>
+<rect x="350" y="30" width="28" height="22"></rect>
+<text x="364" y="45">&#95;</text>
+</g>
+<path d="M378 41h10"></path>
+</g>
+<path d="M388 41h20"></path>
+</g>
+<g>
+<path d="M408 41h0"></path>
+<path d="M588 41h0"></path>
+<path d="M408 41h20"></path>
+<g>
+<path d="M428 41h8"></path>
+<path d="M560 41h8"></path>
+<rect x="436" y="30" width="124" height="22"></rect>
+<text x="498" y="45">Month&#95;Literal</text>
+</g>
+<path d="M568 41h20"></path>
+<path d="M408 41a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M428 71h0"></path>
+<path d="M568 71h0"></path>
+<rect x="428" y="60" width="140" height="22"></rect>
+<text x="498" y="75">Weekday&#95;Literal</text>
+</g>
+<path d="M568 71a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+</g>
+<path d="M 588 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>

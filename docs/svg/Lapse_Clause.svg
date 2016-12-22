@@ -1,0 +1,63 @@
+<svg class="railroad-diagram" width="449" height="102" viewBox="0 0 449 102">
+<g transform="translate(.5 .5)">
+<path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M408 41h0"></path>
+<path d="M40 41h20"></path>
+<g>
+<path d="M60 41h0"></path>
+<path d="M388 41h0"></path>
+<path d="M60 41h10"></path>
+<g>
+<path d="M70 41h0"></path>
+<path d="M178 41h0"></path>
+<rect x="70" y="30" width="108" height="22"></rect>
+<text x="124" y="45">From&#95;Clause</text>
+</g>
+<path d="M178 41h10"></path>
+<g>
+<path d="M188 41h0"></path>
+<path d="M388 41h0"></path>
+<path d="M188 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M208 21h160"></path>
+</g>
+<path d="M368 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M188 41h20"></path>
+<g>
+<path d="M208 41h0"></path>
+<path d="M368 41h0"></path>
+<path d="M208 41h10"></path>
+<g>
+<path d="M218 41h0"></path>
+<path d="M246 41h0"></path>
+<rect x="218" y="30" width="28" height="22"></rect>
+<text x="232" y="45">&#95;</text>
+</g>
+<path d="M246 41h10"></path>
+<path d="M256 41h10"></path>
+<g>
+<path d="M266 41h0"></path>
+<path d="M358 41h0"></path>
+<rect x="266" y="30" width="92" height="22"></rect>
+<text x="312" y="45">To&#95;Clause</text>
+</g>
+<path d="M358 41h10"></path>
+</g>
+<path d="M368 41h20"></path>
+</g>
+</g>
+<path d="M388 41h20"></path>
+<path d="M40 41a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M60 71h106"></path>
+<path d="M282 71h106"></path>
+<rect x="166" y="60" width="116" height="22"></rect>
+<text x="224" y="75">Until&#95;Clause</text>
+</g>
+<path d="M388 71a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M 408 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>

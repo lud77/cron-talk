@@ -1,0 +1,34 @@
+<svg class="railroad-diagram" width="337" height="62" viewBox="0 0 337 62">
+<g transform="translate(.5 .5)">
+<path d="M 20 21 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 31h0"></path>
+<path d="M296 31h0"></path>
+<path d="M40 31h10"></path>
+<g>
+<path d="M50 31h0"></path>
+<path d="M110 31h0"></path>
+<rect x="50" y="20" width="60" height="22" rx="10" ry="10"></rect>
+<text x="80" y="35">until</text>
+</g>
+<path d="M110 31h10"></path>
+<path d="M120 31h10"></path>
+<g>
+<path d="M130 31h0"></path>
+<path d="M158 31h0"></path>
+<rect x="130" y="20" width="28" height="22"></rect>
+<text x="144" y="35">&#95;</text>
+</g>
+<path d="M158 31h10"></path>
+<path d="M168 31h10"></path>
+<g>
+<path d="M178 31h0"></path>
+<path d="M286 31h0"></path>
+<rect x="178" y="20" width="108" height="22"></rect>
+<text x="232" y="35">Time&#95;Clause</text>
+</g>
+<path d="M286 31h10"></path>
+</g>
+<path d="M 296 31 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>

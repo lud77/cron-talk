@@ -1,0 +1,95 @@
+<svg class="railroad-diagram" width="685" height="102" viewBox="0 0 685 102">
+<g transform="translate(.5 .5)">
+<path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M644 41h0"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M108 41h0"></path>
+<path d="M40 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M60 21h28"></path>
+</g>
+<path d="M88 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M40 41h20"></path>
+<g>
+<path d="M60 41h0"></path>
+<path d="M88 41h0"></path>
+<rect x="60" y="30" width="28" height="22"></rect>
+<text x="74" y="45">&#95;</text>
+</g>
+<path d="M88 41h20"></path>
+</g>
+<g>
+<path d="M108 41h0"></path>
+<path d="M352 41h0"></path>
+<path d="M108 41h20"></path>
+<g>
+<path d="M128 41h24"></path>
+<path d="M308 41h24"></path>
+<rect x="152" y="30" width="156" height="22"></rect>
+<text x="230" y="45">Every&#95;Span&#95;Clause</text>
+</g>
+<path d="M332 41h20"></path>
+<path d="M108 41a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M128 71h0"></path>
+<path d="M332 71h0"></path>
+<rect x="128" y="60" width="204" height="22"></rect>
+<text x="230" y="75">Every&#95;Occurrence&#95;Clause</text>
+</g>
+<path d="M332 71a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+<g>
+<path d="M352 41h0"></path>
+<path d="M576 41h0"></path>
+<path d="M352 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M372 21h184"></path>
+</g>
+<path d="M556 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M352 41h20"></path>
+<g>
+<path d="M372 41h0"></path>
+<path d="M556 41h0"></path>
+<path d="M372 41h10"></path>
+<g>
+<path d="M382 41h0"></path>
+<path d="M410 41h0"></path>
+<rect x="382" y="30" width="28" height="22"></rect>
+<text x="396" y="45">&#95;</text>
+</g>
+<path d="M410 41h10"></path>
+<path d="M420 41h10"></path>
+<g>
+<path d="M430 41h0"></path>
+<path d="M546 41h0"></path>
+<rect x="430" y="30" width="116" height="22"></rect>
+<text x="488" y="45">Lapse&#95;Clause</text>
+</g>
+<path d="M546 41h10"></path>
+</g>
+<path d="M556 41h20"></path>
+</g>
+<g>
+<path d="M576 41h0"></path>
+<path d="M644 41h0"></path>
+<path d="M576 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M596 21h28"></path>
+</g>
+<path d="M624 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M576 41h20"></path>
+<g>
+<path d="M596 41h0"></path>
+<path d="M624 41h0"></path>
+<rect x="596" y="30" width="28" height="22"></rect>
+<text x="610" y="45">&#95;</text>
+</g>
+<path d="M624 41h20"></path>
+</g>
+</g>
+<path d="M 644 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>

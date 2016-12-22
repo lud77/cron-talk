@@ -1,0 +1,61 @@
+<svg class="railroad-diagram" width="553" height="132" viewBox="0 0 553 132">
+<g transform="translate(.5 .5)">
+<path d="M 20 31 v 20 m 10 -20 v 20 m -10 -10 h 20.5"></path>
+<g>
+<path d="M40 41h0"></path>
+<path d="M512 41h0"></path>
+<path d="M40 41h20"></path>
+<g>
+<path d="M60 41h0"></path>
+<path d="M492 41h0"></path>
+<g>
+<path d="M60 41h0"></path>
+<path d="M240 41h0"></path>
+<path d="M60 41h20"></path>
+<g>
+<path d="M80 41h4"></path>
+<path d="M216 41h4"></path>
+<rect x="84" y="30" width="132" height="22"></rect>
+<text x="150" y="45">Ordinal&#95;Number</text>
+</g>
+<path d="M220 41h20"></path>
+<path d="M60 41a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M80 71h0"></path>
+<path d="M220 71h0"></path>
+<rect x="80" y="60" width="140" height="22"></rect>
+<text x="150" y="75">Ordinal&#95;Literal</text>
+</g>
+<path d="M220 71a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path>
+</g>
+<g>
+<path d="M240 41h0"></path>
+<path d="M492 41h0"></path>
+<path d="M240 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path>
+<g>
+<path d="M260 21h212"></path>
+</g>
+<path d="M472 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path>
+<path d="M240 41h20"></path>
+<g>
+<path d="M260 41h0"></path>
+<path d="M472 41h0"></path>
+<rect x="260" y="30" width="212" height="22" rx="10" ry="10"></rect>
+<text x="366" y="45">Unknown expression:group</text>
+</g>
+<path d="M472 41h20"></path>
+</g>
+</g>
+<path d="M492 41h20"></path>
+<path d="M40 41a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path>
+<g>
+<path d="M60 101h190"></path>
+<path d="M302 101h190"></path>
+<rect x="250" y="90" width="52" height="22" rx="10" ry="10"></rect>
+<text x="276" y="105">last</text>
+</g>
+<path d="M492 101a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path>
+</g>
+<path d="M 512 41 h 20 m -10 -10 v 20 m 10 -20 v 20"></path>
+</g>
+</svg>
