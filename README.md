@@ -1,4 +1,4 @@
-# crontalk v0.0.5
+# crontalk v0.0.8
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
@@ -25,7 +25,7 @@ TODO
 
 ## Documentation
 
-Take a look at the [railroad diagram](docs/railroad.html) of Crontalk's DSL.
+Take a look at the [railroad diagram](docs/railroad.md) of Crontalk's DSL.
 
 
 
