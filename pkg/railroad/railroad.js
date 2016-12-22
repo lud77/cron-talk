@@ -25,7 +25,7 @@ let iterate = function(ruleKeys, grammarRules, tplRules, callback, ndx) {
 	try {
 		let svg = grammkit.diagram(rule);
 
-		fs.writeFile('docs/svg/' + rule.name + '.svg', svg, function(err) {
+		fs.writeFile('docs/svg/' + rule.name + '.svg', '<?xml version="1.0" encoding="utf-8"?>' + svg, function(err) {
 			if (err !== null) {
 				console.log(err);
 			}

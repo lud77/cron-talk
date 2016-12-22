@@ -1,4 +1,4 @@
-# crontalk v0.0.8
+# crontalk v0.0.11
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
