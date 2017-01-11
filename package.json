@@ -1,6 +1,6 @@
 {
   "name": "crontalk",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "description": "A pure JS parser for natural language repeated events expressions",
   "main": "dist/crontalk.js",
   "badges": [
@@ -23,7 +23,7 @@
     "build:readme": "hbsrender -t pkg/readme/README.md.hbs -c ./package.json > README.md",
     "build:docs": "npm run clean:docs && npm run build:railroad && npm run build:readme",
     "build:grammar": "pegjs -o dist/crontalk.js src/peg/crontalk.peg",
-    "update:version": "npm version patch --force && npm run build:docs",
+    "update:version": "npm version patch --force && npm run build:docs && git add .",
     "test": "mocha test/**/*.js",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**/*.js"
   },
