@@ -1,4 +1,4 @@
-# crontalk v0.0.20
+# crontalk v0.0.21
 > A pure JS parser for natural language repeated events expressions
 
 ![coverage/lcov-report/index.html](https://img.shields.io/badge/tests-passing-green.svg)
@@ -69,7 +69,7 @@ will give you the object:
 		}
 	}
 
-You can use constructions such as "the last day of november" or "the second last minute of the fourth hour". The "last" keyword will yeld negative values for the related unit of measure (-1 means last, -2 means second last, etc).
+You can use constructions such as "the last day of november" or "the second last minute of the fourth hour". The "last" keyword will yield negative values for the related unit of measure (-1 means last, -2 means second last, etc).
 
 
 ### Every (phase)
